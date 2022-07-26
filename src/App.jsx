@@ -1,16 +1,15 @@
+import { Layout } from "components/Layout/Layout";
+import { Routes, Route } from "react-router-dom";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Movies
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<div>Home</div>} />
+          <Route path="movies" element={<div>Movies</div>} />
+        </Route>
+      </Routes>
+    </>
   );
 };
