@@ -24,8 +24,14 @@ export const MovieCardItem = styled.li`
   }
 `;
 
+export const MovieCardItemTitle = styled.div`
+text-decoration: none;
+color: black;
+`;
+
 export const MovieCardImage = styled.img`
   width: 309px;
   height: 449px;
+  text-decoration: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
