@@ -7,7 +7,7 @@ export const getDataFilms = async id => {
     const { data } = await api.get(`/movie/${id}`);
     showLoader();
     return data;
-  } catch {
-    Notiflix.Notify.failure('Search result not successful');
+  } catch (error) {
+    console.log(error);
   }
 };

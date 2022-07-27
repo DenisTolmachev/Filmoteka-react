@@ -7,17 +7,19 @@ export const HeaderStyle = styled.header`
 `;
 
 export const NavStyle = styled.nav`
-    display: flex;
-    gap: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 `;
 
 export const LinkStyle = styled(NavLink)`
-display: flex;
-    color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  color: ${({ theme }) => theme.colors.white};
   text-decoration: none;
   font-size: ${({ theme }) => theme.fontSizes.ml};
   padding: 5px;
   border-radius: 5px;
+  text-transform: uppercase;
 
   &.active {
     background-color: ${({ theme }) => theme.colors.white};
