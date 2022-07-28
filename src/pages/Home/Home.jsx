@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { getPopularMovie } from 'services/getPopularMovie';
-import { TrendingMoviesList } from 'components/TrendingMoviesList';
+import { TrendingMoviesList } from 'components/TrendingMoviesList/TrendingMoviesList';
 import { HomeContainer, HomeTitle } from './Home.styled';
 
 const Home = () => {

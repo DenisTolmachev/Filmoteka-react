@@ -29,5 +29,6 @@ export const LinkStyle = styled(NavLink)`
   :hover:not(.active),
   :focus-visible:not(.active) {
     color: ${({ theme }) => theme.colors.white};
+    box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.white};
   }
 `;
