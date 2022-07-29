@@ -1,4 +1,5 @@
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { DetailsLinks, LinkStyle } from './MovieDetails.style';
 //import { useEffect, useState } from 'react';
 //import { getDataFilms } from 'services/getDataFilms';
 
@@ -11,8 +12,11 @@ const MovieDetails = () => {
         <h2>Movies ID</h2>
       </div>
 
-      <Link to={'cast'}>Cast</Link>
-      <Link to={'reviews'}>Reviews</Link>
+      <DetailsLinks>
+        <LinkStyle to={'cast'}>Cast</LinkStyle>
+        <LinkStyle to={'reviews'}>Reviews</LinkStyle>
+      </DetailsLinks>
+
       <Outlet />
     </>
   );

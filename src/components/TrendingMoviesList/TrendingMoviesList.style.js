@@ -24,9 +24,12 @@ export const MovieCardItem = styled.li`
   }
 `;
 
-export const MovieCardItemTitle = styled.div`
+export const MovieCardItemTitle = styled.p`
+width: 309px;
 text-decoration: none;
 color: black;
+font-weight: ${({ theme }) => theme.fontWeights.bold};
+font-size: ${({ theme }) => theme.fontSizes.m};
 `;
 
 export const MovieCardImage = styled.img`
