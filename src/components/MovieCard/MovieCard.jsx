@@ -1,28 +1,36 @@
-import { Genres } from "components/Genres/Genres";
+import {
+  MovieCardContainer,
+  MovieCardImage,
+  MovieCardTitle,
+  MovieCardScore,
+  MovieCardOverwiew,
+  MovieCardOverwiewTitle,
+  MovieCardOverwiewText,
+  CardInformation,
+} from './MovieCard.styled';
+import { Genres } from 'components/Genres/Genres';
 
 export const MovieCard = ({ movie }) => {
   return (
-    <>
-    <div>
-      <img
+    <MovieCardContainer>
+      <MovieCardImage
         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
         alt={movie.title}
-        width="300px"
       />
-    </div>
-    <div>
-        <h2>{movie.title}({movie.release_date})</h2>
-    </div>
-    <div>
-        <p>User Score: {movie.vote_average}</p>
-    </div>
-    <div>
-        <p>Overview: {movie.overview}</p>
-    </div>
-    <div>
+      <CardInformation>
+        <MovieCardTitle>
+          {movie.title}({movie.release_date})
+        </MovieCardTitle>
+        <MovieCardScore>
+          <span>User Score: </span>
+          {movie.vote_average}
+        </MovieCardScore>
+        <MovieCardOverwiew>
+          <MovieCardOverwiewTitle>Overview: </MovieCardOverwiewTitle>
+          <MovieCardOverwiewText>{movie.overview}</MovieCardOverwiewText>
+        </MovieCardOverwiew>
         <Genres genres={movie.genres} />
-    </div>
-    </>
-    
+      </CardInformation>
+    </MovieCardContainer>
   );
 };
