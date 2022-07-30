@@ -1,10 +1,11 @@
 import { Layout } from 'layout/SharedLayout';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-//import  MovieDetails from "pages/MovieDetails/MovieDetails";
+
 
 const Home = lazy(() => import('pages/Home/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
+const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
 
 export const App = () => {
   return (
@@ -18,7 +19,7 @@ export const App = () => {
               <Route path="cast" element={<div>Cast</div>} />
               <Route path="reviews" element={<div>Reviews</div>} />
             </Route>
-            <Route path="*" element={<div>404</div>} />
+            <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
       </Suspense>

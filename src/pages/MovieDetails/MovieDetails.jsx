@@ -1,23 +1,36 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useParams } from 'react-router-dom';
 import { DetailsLinks, LinkStyle } from './MovieDetails.style';
-//import { useEffect, useState } from 'react';
-//import { getDataFilms } from 'services/getDataFilms';
+import { Suspense, useEffect, useState } from 'react';
+import { getDataFilms } from 'services/getDataFilms';
+import { MovieCard } from 'components/MovieCard/MovieCard';
 
 const MovieDetails = () => {
-  //const [MovieId, setMovieId] = useState([]);
+  const [MovieId, setMovieId] = useState(null);
+  const { moviesId } = useParams();
+
+  useEffect(() => {
+    getDataFilms(moviesId).then(result => {
+      setMovieId(result);
+    });
+  }, [moviesId]);
+
+console.log(MovieId);
 
   return (
     <>
-      <div>
-        <h2>Movies ID</h2>
-      </div>
+      {MovieId && (
+        <>
+          <MovieCard movie={MovieId} />
+          <DetailsLinks>
+            <LinkStyle to={'cast'}>Cast</LinkStyle>
+            <LinkStyle to={'reviews'}>Reviews</LinkStyle>
+          </DetailsLinks>
 
-      <DetailsLinks>
-        <LinkStyle to={'cast'}>Cast</LinkStyle>
-        <LinkStyle to={'reviews'}>Reviews</LinkStyle>
-      </DetailsLinks>
-
-      <Outlet />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Outlet />
+          </Suspense>
+        </>
+      )}
     </>
   );
 };

@@ -10,7 +10,7 @@ const Home = () => {
     getPopularMovie().then(data => {
       setPopularMovies(data.results);
     });
-  });
+  },[]);
 
   return (
     <HomeContainer>
