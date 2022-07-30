@@ -14,8 +14,6 @@ const MovieDetails = () => {
     });
   }, [moviesId]);
 
-console.log(MovieId);
-
   return (
     <>
       {MovieId && (
