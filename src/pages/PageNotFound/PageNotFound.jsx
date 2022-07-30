@@ -13,7 +13,7 @@ const PageNotFound = () => {
       <div>
         <NotFoundIcon />
       </div>
-      <PageNotFoundText>Кина не будет!</PageNotFoundText>
+      <PageNotFoundText>Кіна не буде!</PageNotFoundText>
     </PageNotFoundContainer>
   );
 };

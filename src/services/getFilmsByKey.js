@@ -2,7 +2,7 @@ import { api } from './api';
 
 export const filmsParams = {
   query: '',
-  page: 1,
+  // page: 1,
 };
 
 export const getFilmsByKey = async () => {

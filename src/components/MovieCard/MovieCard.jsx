@@ -11,8 +11,7 @@ export const MovieCard = ({ movie }) => {
       />
     </div>
     <div>
-        <h2>{movie.title}</h2>
-        <span>{movie.release_date}</span>
+        <h2>{movie.title}({movie.release_date})</h2>
     </div>
     <div>
         <p>User Score: {movie.vote_average}</p>
