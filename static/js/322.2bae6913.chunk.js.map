@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/322.2bae6913.chunk.js","mappings":"0JAIA,UAJoB,WAClB,OAAO","sources":["pages/FilmCredits/FilmCredits.jsx"],"sourcesContent":["const FilmCredits = () => {\n  return <div>Credits</div>;\n};\n\nexport default FilmCredits;"],"names":[],"sourceRoot":""}
