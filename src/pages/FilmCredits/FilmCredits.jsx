@@ -13,8 +13,6 @@ const FilmCredits = () => {
     });
   }, [moviesId]);
 
-  console.log(Credits);
-
   return (
     <>
       {Credits && (

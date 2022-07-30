@@ -13,8 +13,6 @@ const FilmReviews = () => {
     });
   }, [moviesId]);
 
-  console.log(Reviews);
-
   return (
     <>
       {Reviews && (
