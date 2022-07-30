@@ -6,6 +6,8 @@ import { Routes, Route } from 'react-router-dom';
 const Home = lazy(() => import('pages/Home/Home'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
+const FilmCredits = lazy(() => import('pages/FilmCredits/FilmCredits'));
+const FilmReviews = lazy(() => import('pages/FilmReviews/FilmReviews'));
 
 export const App = () => {
   return (
@@ -16,8 +18,8 @@ export const App = () => {
             <Route index element={<Home />} />
             <Route path="movies" element={<div>MoviesList</div>} />
             <Route path="movies/:moviesId" element={<MovieDetails />}>
-              <Route path="cast" element={<div>Cast</div>} />
-              <Route path="reviews" element={<div>Reviews</div>} />
+              <Route path="cast" element={<FilmCredits />} />
+              <Route path="reviews" element={<FilmReviews />} />
             </Route>
             <Route path="*" element={<PageNotFound />} />
           </Route>
