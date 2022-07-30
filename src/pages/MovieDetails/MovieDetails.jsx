@@ -3,6 +3,7 @@ import { DetailsLinks, LinkStyle } from './MovieDetails.style';
 import { Suspense, useEffect, useState } from 'react';
 import { getDataFilms } from 'services/getDataFilms';
 import { MovieCard } from 'components/MovieCard/MovieCard';
+import { LoaderSpinner } from 'components/common/Loader/Loader';
 
 const MovieDetails = () => {
   const [MovieId, setMovieId] = useState(null);
@@ -24,7 +25,7 @@ const MovieDetails = () => {
             <LinkStyle to={'reviews'}>Reviews</LinkStyle>
           </DetailsLinks>
 
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<LoaderSpinner />}>
             <Outlet />
           </Suspense>
         </>
