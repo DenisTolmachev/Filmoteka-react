@@ -4,15 +4,17 @@ import {
   MovieListItem,
   MovieListItemTitle,
   MovieListImage,
+  ErrorFindMessage,
 } from './MoviesList.style';
 
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
-  console.log(movies.total_results);
+
+  console.log(movies);
 
   return (
     <>
-      {movies || movies.total_results === 0 ? (
+      {movies && movies.length > 0 ? (
         <MovieListList>
           {movies.map(movie => (
             <MovieListItem key={movie.id}>
@@ -31,7 +33,7 @@ export const MoviesList = ({ movies }) => {
           ))}
         </MovieListList>
       ) : (
-        <div>Not found</div>
+        <ErrorFindMessage>Films not found, enter the correct request!</ErrorFindMessage>
       )}
     </>
   );

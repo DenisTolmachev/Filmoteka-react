@@ -23,3 +23,10 @@ export const ReviewsText = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.m};
   margin-top: 10px;
 `;
+
+export const ErrorReviewMessage = styled.div`
+text-align: center;
+  font-size: ${({ theme }) => theme.fontSizes.ml};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  color: ${({ theme }) => theme.colors.primary};;
+`;

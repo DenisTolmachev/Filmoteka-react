@@ -3,11 +3,14 @@ import {
   ReviewsItem,
   ReviewsAuthor,
   ReviewsText,
+  ErrorReviewMessage,
 } from './FilmReviewsList.styled';
 
 export const FilmReviewsList = ({ reviews }) => {
+
   return (
-    <ReviewsList>
+<>
+{reviews.lenght > 0 ? (<ReviewsList>
       {reviews.map(review => (
         <ReviewsItem key={review.id}>
           <ReviewsAuthor>
@@ -17,6 +20,9 @@ export const FilmReviewsList = ({ reviews }) => {
           <ReviewsText>{review.content}</ReviewsText>
         </ReviewsItem>
       ))}
-    </ReviewsList>
+    </ReviewsList>) : (<ErrorReviewMessage>We don`t have any reviws for this movie!</ErrorReviewMessage>)}
+</>
+
+    
   );
 };

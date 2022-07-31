@@ -38,3 +38,10 @@ export const MovieListImage = styled.img`
   text-decoration: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
+
+export const ErrorFindMessage = styled.div`
+text-align: center;
+  font-size: ${({ theme }) => theme.fontSizes.ml};
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
+  color: ${({ theme }) => theme.colors.primary};;
+`;
