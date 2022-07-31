@@ -27,7 +27,7 @@ const Movies = () => {
       setSearchParams(nextParams);
     }
   };
-console.log(searchValue);
+
   return (
     <div>
       <Searchbar onSubmit={handleFormSubmit} value={searchParams.get('name')} />
