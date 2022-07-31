@@ -19,13 +19,17 @@ const MovieDetails = () => {
 
   return (
     <>
-    <BackLink to={location}>&#8678; Back to movies</BackLink>
+      <BackLink to={location}>&#8678; Back to movies</BackLink>
       {MovieId && (
         <>
           <MovieCard movie={MovieId} />
           <DetailsLinks>
-            <LinkStyle to={'cast'} state={{ from: location }}>Cast</LinkStyle>
-            <LinkStyle to={'reviews'} state={{ from: location }}>Reviews</LinkStyle>
+            <LinkStyle to={'cast'} state={{ from: location }}>
+              Cast
+            </LinkStyle>
+            <LinkStyle to={'reviews'} state={{ from: location }}>
+              Reviews
+            </LinkStyle>
           </DetailsLinks>
 
           <Suspense fallback={<LoaderSpinner />}>

@@ -13,7 +13,6 @@ export const CreditsItem = styled.li`
   margin: 10px;
   margin-bottom: 20px;
   width: 150px;
-
 `;
 
 export const CreditsImage = styled.img`
@@ -21,14 +20,13 @@ export const CreditsImage = styled.img`
 `;
 
 export const ActorName = styled.p`
-margin-top: 5px;
-font-weight: ${({ theme }) => theme.fontWeights.bold};
+  margin-top: 5px;
+  font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
 
-
 export const ActorCharacter = styled.p`
-margin-top: 5px;
-& span {
+  margin-top: 5px;
+  & span {
     font-weight: ${({ theme }) => theme.fontWeights.bold};
   }
 `;
