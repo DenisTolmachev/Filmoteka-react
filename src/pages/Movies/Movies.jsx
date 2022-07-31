@@ -1,35 +1,37 @@
 import { Searchbar } from 'components/SearchBar/SearchBar';
 import { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { getFilmsByKey } from 'services/getFilmsByKey';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 
 const Movies = () => {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchValue, setSearchValue] = useState([]);
 
-  console.log('searchValue', searchValue);
+  useEffect(() => {
+    let movieName = searchParams.get('name') ?? '';
+    if (movieName === '') {
+      return;
+    } else {
+      getFilmsByKey({ query: movieName, page: 1 }).then(result => {
+        setSearchValue(result.data.results);
+      });
+    }
+  }, [searchParams]);
 
-    useEffect(() => {
-        if (searchValue === '') {
-            return;
-        } else {
-            getFilmsByKey({query: searchValue}).then(result => {
-                console.log(result);
-            });
-        }
-    }, [searchValue]);
-
-
-  const handleFormSubmit = searchValue => {
-    if (searchValue.trim() === '') {
+  const handleFormSubmit = value => {
+    if (value.query.trim() === '') {
       console.log('enter a search value');
     } else {
-      setSearchValue(searchValue);
+      const nextParams = value.query !== '' ? { name: value.query } : {};
+      setSearchParams(nextParams);
     }
   };
-
+console.log(searchValue);
   return (
     <div>
-      <Searchbar onSubmit={handleFormSubmit} />
-      <div>MoviesList</div>
+      <Searchbar onSubmit={handleFormSubmit} value={searchParams.get('name')} />
+      <MoviesList movies={searchValue} />
     </div>
   );
 };

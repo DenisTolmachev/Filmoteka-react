@@ -1,4 +1,4 @@
-import { Layout } from 'layout/SharedLayout';
+import { SharedLayout } from 'layout/SharedLayout';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { LoaderSpinner } from 'components/common/Loader/Loader'
@@ -16,7 +16,7 @@ export const App = () => {
     <>
       <Suspense fallback={<LoaderSpinner />}>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          <Route path="/" element={<SharedLayout />}>
             <Route index element={<Home />} />
             <Route path="movies" element={<Movies />} />
             <Route path="movies/:moviesId" element={<MovieDetails />}>

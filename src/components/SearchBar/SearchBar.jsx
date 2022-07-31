@@ -7,32 +7,28 @@ import {
 import { Formik } from 'formik';
 import { RiSearchLine } from 'react-icons/ri';
 
-export const Searchbar = ({ onSubmit }) => {
+export const Searchbar = ({ onSubmit, value }) => {
   return (
     <SearchbarContainer>
       <Formik
-        initialValues={{ query: '' }}
+        initialValues={{ query: value ?? '' }}
         onSubmit={(values, actions) => {
-          onSubmit(values.query);
+          onSubmit(values);
           actions.resetForm();
         }}
       >
-        {props => (
-          <SearchForm>
-            <SearchButton type="submit">
-              <RiSearchLine />
-            </SearchButton>
-            <SearchInput
-              type="text"
-              autoComplete="off"
-              autoFocus
-              name="query"
-              placeholder="Search movies"
-              value={props.values.query}
-              onChange={props.handleChange}
-            />
-          </SearchForm>
-        )}
+        <SearchForm>
+          <SearchButton type="submit">
+            <RiSearchLine />
+          </SearchButton>
+          <SearchInput
+            type="text"
+            autoComplete="off"
+            autoFocus
+            name="query"
+            placeholder="Search movies"
+          />
+        </SearchForm>
       </Formik>
     </SearchbarContainer>
   );
