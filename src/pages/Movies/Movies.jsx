@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getFilmsByKey } from 'services/getFilmsByKey';
 import { MoviesList } from 'components/MoviesList/MoviesList';
+import { toast } from 'react-toastify';
 
 const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,7 +22,15 @@ const Movies = () => {
 
   const handleFormSubmit = value => {
     if (value.query.trim() === '') {
-      console.log('enter a search value');
+      toast.warn('Enter a movie title!', {
+        position: "top-center",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     } else {
       const nextParams = value.query !== '' ? { name: value.query } : {};
       setSearchParams(nextParams);
@@ -32,6 +41,7 @@ const Movies = () => {
     <div>
       <Searchbar onSubmit={handleFormSubmit} value={searchParams.get('name')} />
       <MoviesList movies={searchValue} />
+      
     </div>
   );
 };
