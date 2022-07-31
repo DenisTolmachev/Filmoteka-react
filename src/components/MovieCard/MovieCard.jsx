@@ -11,6 +11,8 @@ import {
 import { Genres } from 'components/Genres/Genres';
 
 export const MovieCard = ({ movie }) => {
+
+  
   return (
     <MovieCardContainer>
       <MovieCardImage
@@ -19,7 +21,7 @@ export const MovieCard = ({ movie }) => {
       />
       <CardInformation>
         <MovieCardTitle>
-          {movie.title}({movie.release_date})
+          {movie.title}({new Date(movie.release_date).getFullYear()})
         </MovieCardTitle>
         <MovieCardScore>
           <span>User Score: </span>
