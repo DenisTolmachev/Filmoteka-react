@@ -10,7 +10,7 @@ export const FilmReviewsList = ({ reviews }) => {
 
   return (
 <>
-{reviews.lenght > 0 ? (<ReviewsList>
+{reviews.lenght !== 0 ? (<ReviewsList>
       {reviews.map(review => (
         <ReviewsItem key={review.id}>
           <ReviewsAuthor>
