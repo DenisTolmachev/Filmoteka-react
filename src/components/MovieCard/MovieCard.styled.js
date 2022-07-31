@@ -5,7 +5,7 @@ export const MovieCardContainer = styled.div`
 `;
 
 export const MovieCardImage = styled.img`
-  width: 300px;
+  width: 250px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 

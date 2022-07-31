@@ -24,8 +24,8 @@ const MovieDetails = () => {
         <>
           <MovieCard movie={MovieId} />
           <DetailsLinks>
-            <LinkStyle to={'cast'}>Cast</LinkStyle>
-            <LinkStyle to={'reviews'}>Reviews</LinkStyle>
+            <LinkStyle to={'cast'} state={{ from: location }}>Cast</LinkStyle>
+            <LinkStyle to={'reviews'} state={{ from: location }}>Reviews</LinkStyle>
           </DetailsLinks>
 
           <Suspense fallback={<LoaderSpinner />}>
