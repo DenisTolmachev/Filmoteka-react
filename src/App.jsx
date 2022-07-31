@@ -1,7 +1,7 @@
 import { SharedLayout } from 'layout/SharedLayout';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { LoaderSpinner } from 'components/common/Loader/Loader'
+import { LoaderSpinner } from 'components/Loader/Loader'
 
 
 const Home = lazy(() => import('pages/Home/Home'));
