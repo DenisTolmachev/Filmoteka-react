@@ -14,7 +14,7 @@ const Movies = () => {
       return;
     } else {
       getFilmsByKey({ query: movieName, page: 1 }).then(result => {
-        setSearchValue(result.data.results);
+        setSearchValue(result.results);
       });
     }
   }, [searchParams]);

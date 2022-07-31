@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FaRegTired } from 'react-icons/fa';
 
 export const PageNotFoundContainer = styled.div`
-  height: 100vh;
+  //height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
