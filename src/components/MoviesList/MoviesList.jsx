@@ -14,9 +14,9 @@ export const MoviesList = ({ movies }) => {
 
   return (
     <>
-      {movies && movies.length > 0 ? (
-        <MovieListList>
-          {movies.map(movie => (
+      <MovieListList>
+        {movies.length !== 0 ? (
+          movies.map(movie => (
             <MovieListItem key={movie.id}>
               <Link to={`/movies/${movie.id}`} state={{ from: location }}>
                 <MovieListImage
@@ -30,11 +30,13 @@ export const MoviesList = ({ movies }) => {
               </Link>
               <MovieListItemTitle>{movie.title}</MovieListItemTitle>
             </MovieListItem>
-          ))}
-        </MovieListList>
-      ) : (
-        <ErrorFindMessage>Films not found, enter the correct request!</ErrorFindMessage>
-      )}
+          ))
+        ) : (
+          <ErrorFindMessage>
+            Films not found, enter the correct request!
+          </ErrorFindMessage>
+        )}
+      </MovieListList>
     </>
   );
 };
