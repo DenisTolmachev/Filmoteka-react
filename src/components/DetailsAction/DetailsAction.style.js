@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const DetailsLinks = styled.div`
+export const DetailsActionStyle = styled.div`
   display: flex;
   justify-content: start;
   padding: 20px 0;

@@ -30,11 +30,10 @@ const Movies = () => {
   };
 
   return (
-    <div>
+    <>
       <Searchbar onSubmit={handleFormSubmit} value={searchParams.get('name')} />
       <MoviesList movies={searchValue} />
-      
-    </div>
+    </>
   );
 };
 
