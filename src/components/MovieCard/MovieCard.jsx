@@ -8,7 +8,7 @@ import {
   MovieCardOverwiewText,
   CardInformation,
 } from './MovieCard.styled';
-import { Genres } from 'components/Genres/Genres';
+import { Genres } from 'components/MovieCard/Genres/Genres';
 
 export const MovieCard = ({ movie }) => {
 

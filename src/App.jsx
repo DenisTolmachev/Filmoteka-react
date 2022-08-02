@@ -1,13 +1,13 @@
 import { SharedLayout } from 'layout/SharedLayout';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { LoaderSpinner } from 'components/Loader/Loader';
+import { LoaderSpinner } from 'components/common/Loader/Loader';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
-const FilmCasts = lazy(() => import('pages/FilmCasts/FilmCasts'));
+const FilmCasts = lazy(() => import('pages/MovieDetails/FilmCasts/FilmCasts'));
 const FilmReviews = lazy(() => import('pages/FilmReviews/FilmReviews'));
 
 export const App = () => {

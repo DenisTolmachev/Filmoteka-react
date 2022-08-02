@@ -4,7 +4,7 @@ import { BackLink } from 'components/common/BackLink';
 import { Suspense, useEffect, useState } from 'react';
 import { getDataFilms } from 'services/getDataFilms';
 import { MovieCard } from 'components/MovieCard/MovieCard';
-import { LoaderSpinner } from 'components/Loader/Loader';
+import { LoaderSpinner } from 'components/common/Loader/Loader';
 
 const MovieDetails = () => {
   const [MovieId, setMovieId] = useState(null);
