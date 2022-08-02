@@ -2,6 +2,7 @@ import { SharedLayout } from 'layout/SharedLayout';
 import { lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { LoaderSpinner } from 'components/common/Loader/Loader';
+import { ToastContainer } from 'react-toastify';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
@@ -32,6 +33,7 @@ export const App = () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
+      <ToastContainer />
     </>
   );
 };
