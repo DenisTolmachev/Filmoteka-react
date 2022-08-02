@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getFilmCasts } from 'services/getFilmCasts';
 
 const FilmCasts = () => {
-  const [Casts, setCasts] = useState(null);
+  const [casts, setCasts] = useState(null);
   const { moviesId } = useParams();
 
   useEffect(() => {
@@ -15,9 +15,9 @@ const FilmCasts = () => {
 
   return (
     <>
-      {Casts && (
+      {casts && (
         <>
-          <FilmCastsList Casts={Casts} />
+          <FilmCastsList casts={casts} />
         </>
       )}
     </>

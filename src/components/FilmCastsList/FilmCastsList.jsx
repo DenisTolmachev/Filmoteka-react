@@ -6,10 +6,10 @@ import {
   ActorCharacter,
 } from './FilmCastsList.style';
 
-export const FilmCastsList = ({ Casts }) => {
+export const FilmCastsList = ({ casts }) => {
   return (
     <CastsList>
-      {Casts.map(credit => (
+      {casts.map(credit => (
         <CastsItem key={credit.credit_id}>
           <CastsImage
             src={
