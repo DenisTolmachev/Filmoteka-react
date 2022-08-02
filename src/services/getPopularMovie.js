@@ -1,4 +1,5 @@
 import { api } from './api';
+import { toastError } from 'utils/toastState';
 
 export const popularParams = {
   page: 1,
@@ -11,6 +12,6 @@ export const getPopularMovie = async () => {
     });
     return data;
   } catch (error) {
-    console.log(error);
+    toastError();
   }
 };

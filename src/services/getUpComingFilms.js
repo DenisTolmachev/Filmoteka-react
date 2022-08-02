@@ -1,4 +1,5 @@
 import { api } from './api';
+import { toastError } from 'utils/toastState';
 
 export const upParams = {
     page: 1,
@@ -9,6 +10,6 @@ export const upParams = {
       const { data } = await api.get(`/movie/upcoming`, { params: upParams });
       return data;
     } catch (error) {
-      console.log(error);
+      toastError();
     }
   };

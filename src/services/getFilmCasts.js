@@ -1,4 +1,5 @@
 import { api } from './api';
+import { toastError } from 'utils/toastState';
 
 export const getFilmCasts = async id => {
   try {
@@ -6,6 +7,6 @@ export const getFilmCasts = async id => {
 
     return data;
   } catch (error) {
-    console.log(error);
+    toastError();
   }
 };
