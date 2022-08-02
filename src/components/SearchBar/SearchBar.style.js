@@ -4,7 +4,6 @@ import { Form, Field } from 'formik';
 export const SearchbarContainer = styled.div`
   top: 0;
   left: 0;
-  position: sticky;
   display: flex;
   justify-content: center;
   align-items: center;
