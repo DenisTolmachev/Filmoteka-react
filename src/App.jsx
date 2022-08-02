@@ -8,7 +8,10 @@ const Movies = lazy(() => import('pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 const PageNotFound = lazy(() => import('pages/PageNotFound/PageNotFound'));
 const FilmCasts = lazy(() => import('pages/MovieDetails/FilmCasts/FilmCasts'));
-const FilmReviews = lazy(() => import('pages/MovieDetails/FilmReviews/FilmReviews'));
+const FilmReviews = lazy(() =>
+  import('pages/MovieDetails/FilmReviews/FilmReviews')
+);
+const TopFilms = lazy(() => import('pages/TopFilms/TopFilms'));
 
 export const App = () => {
   return (
@@ -22,8 +25,9 @@ export const App = () => {
               <Route path="cast" element={<FilmCasts />} />
               <Route path="reviews" element={<FilmReviews />} />
             </Route>
-            <Route path="*" element={<PageNotFound />} />
+            <Route path="top_films" element={<TopFilms />} />
           </Route>
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </Suspense>
     </>
