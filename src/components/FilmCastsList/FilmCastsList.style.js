@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const CreditsList = styled.ul`
+export const CastsList = styled.ul`
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -9,13 +9,13 @@ export const CreditsList = styled.ul`
   justify-content: space-around;
 `;
 
-export const CreditsItem = styled.li`
+export const CastsItem = styled.li`
   margin: 10px;
   margin-bottom: 20px;
   width: 150px;
 `;
 
-export const CreditsImage = styled.img`
+export const CastsImage = styled.img`
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 

@@ -1,6 +1,6 @@
 import { api } from './api';
 
-export const getFilmCredits = async id => {
+export const getFilmCasts = async id => {
   try {
     const { data } = await api.get(`/movie/${id}/credits`);
 

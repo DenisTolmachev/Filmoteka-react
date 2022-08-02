@@ -10,8 +10,6 @@ import {
 export const MoviesList = ({ movies }) => {
   const location = useLocation();
 
-  console.log(movies);
-
   return (
     <>
       <MovieListList>

@@ -1,17 +1,17 @@
 import {
-  CreditsList,
-  CreditsItem,
-  CreditsImage,
+  CastsList,
+  CastsItem,
+  CastsImage,
   ActorName,
   ActorCharacter,
-} from './FilmCreditsList.style';
+} from './FilmCastsList.style';
 
-export const FilmCreditsList = ({ credits }) => {
+export const FilmCastsList = ({ Casts }) => {
   return (
-    <CreditsList>
-      {credits.map(credit => (
-        <CreditsItem key={credit.credit_id}>
-          <CreditsImage
+    <CastsList>
+      {Casts.map(credit => (
+        <CastsItem key={credit.credit_id}>
+          <CastsImage
             src={
               credit.profile_path
                 ? `https://image.tmdb.org/t/p/w500` + credit.profile_path
@@ -21,9 +21,12 @@ export const FilmCreditsList = ({ credits }) => {
             width="150"
           />
           <ActorName>{credit.name}</ActorName>
-          <ActorCharacter><span>Character: </span>{credit.character}</ActorCharacter>
-        </CreditsItem>
+          <ActorCharacter>
+            <span>Character: </span>
+            {credit.character}
+          </ActorCharacter>
+        </CastsItem>
       ))}
-    </CreditsList>
+    </CastsList>
   );
 };
