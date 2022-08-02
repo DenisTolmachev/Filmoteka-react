@@ -4,7 +4,7 @@ const navItems = [
   { href: '/', text: 'Home' },
   { href: 'movies', text: 'Movies' },
   { href: 'top_films', text: 'Top Films' },
-  { href: 'upcomming', text: 'Upcomming' },
+  { href: 'upcoming', text: 'Upcoming' },
 ];
 
 export const Header = () => {

@@ -1,23 +1,23 @@
 import { useState, useEffect } from 'react';
-import { getTopFilms } from 'services/getTopFilms';
+import { getUpcomingFilms } from 'services/getUpComingFilms';
 import { MoviesList } from 'components/MoviesList/MoviesList';
 import { PageTitle } from '../../components/common/PageTitle.styled';
 
-const TopFilms = () => {
+const UpComingFilms = () => {
   const [searchValue, setsearchValue] = useState([]);
 
   useEffect(() => {
-    getTopFilms().then(data => {
+    getUpcomingFilms().then(data => {
       setsearchValue(data.results);
     });
   }, []);
 
   return (
     <>
-      <PageTitle>Top Films</PageTitle>
+      <PageTitle>Upcoming</PageTitle>
       <MoviesList movies={searchValue} />
     </>
   );
 };
 
-export default TopFilms;
+export default UpComingFilms;
