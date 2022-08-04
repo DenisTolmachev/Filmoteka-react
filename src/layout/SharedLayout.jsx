@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Header } from './common/Header/Header';
-import { Container } from 'components/common/Container.style';
+import { Container } from 'layout/common/Container.style';
 import { Footer } from './common/Footer/Footer';
 import 'react-toastify/dist/ReactToastify.css';
 

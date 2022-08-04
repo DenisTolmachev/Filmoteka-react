@@ -8,7 +8,7 @@ import { LoaderSpinner } from 'components/common/Loader/Loader';
 import { DetailsAction } from 'components/DetailsAction/DetailsAction';
 
 const MovieDetails = () => {
-  const [MovieId, setMovieId] = useState(null);
+  const [movieId, setMovieId] = useState(null);
   const { moviesId } = useParams();
   const location = useLocation().state?.from ?? '/';
 
@@ -21,9 +21,9 @@ const MovieDetails = () => {
   return (
     <>
       <BackLink to={location}>&#8678; Back to movies</BackLink>
-      {MovieId && (
+      {movieId && (
         <>
-          <MovieCard movie={MovieId} />
+          <MovieCard movie={movieId} />
           <DetailsAction />
           <Suspense fallback={<LoaderSpinner />}>
             <Outlet />

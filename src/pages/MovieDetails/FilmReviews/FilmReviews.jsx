@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getFilmReviews } from 'services/getFilmReviews';
 
 const FilmReviews = () => {
-  const [Reviews, setReviews] = useState(null);
+  const [reviews, setReviews] = useState(null);
   const { moviesId } = useParams();
 
   useEffect(() => {
@@ -15,9 +15,9 @@ const FilmReviews = () => {
 
   return (
     <>
-      {Reviews && (
+      {reviews && (
         <>
-          <FilmReviewsList reviews={Reviews} />
+          <FilmReviewsList reviews={reviews} />
         </>
       )}
     </>
