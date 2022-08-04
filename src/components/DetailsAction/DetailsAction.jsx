@@ -2,7 +2,7 @@ import { DetailsActionStyle, LinkStyle } from './DetailsAction.style';
 import { useLocation } from 'react-router-dom';
 
 export const DetailsAction = () => {
-  const location = useLocation();
+  const location = useLocation().state?.from;
 
   return (
     <DetailsActionStyle>
