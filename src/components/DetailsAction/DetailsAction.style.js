@@ -29,4 +29,4 @@ export const LinkStyle = styled(NavLink)`
   }
 `;
 
-console.log('DetailsActionStyle');
+console.log('test2');
