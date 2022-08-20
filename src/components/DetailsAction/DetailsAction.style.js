@@ -28,5 +28,3 @@ export const LinkStyle = styled(NavLink)`
     box-shadow: 0 0 0 1px ${({ theme }) => theme.colors.primary};
   }
 `;
-
-console.log('test2');
