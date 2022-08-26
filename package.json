@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-05-movies",
+  "name": "filmoteka-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DenisTolmachev.github.io/goit-react-hw-05-movies/",
+  "homepage": "https://DenisTolmachev.github.io/Filmoteka-react/",
   "dependencies": {
     "@csstools/normalize.css": "^12.0.0",
     "@emotion/react": "^11.9.3",
